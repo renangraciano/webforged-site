@@ -110,3 +110,11 @@ FileETag None
     Header set X-UA-Compatible IE=edge env=is-msie
 </IfModule>
 
+<FilesMatch ".(js|css|xml|gz|html)$">
+Header append Vary: Accept-Encoding
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml .html

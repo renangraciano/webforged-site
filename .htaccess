@@ -112,7 +112,7 @@ FileETag None
 
 <FilesMatch ".(js|css|xml|gz|html)$">
 Header append Vary: Accept-Encoding
-
+</FilesMatch>
 # Use UTF-8 encoding for anything served text/plain or text/html
 AddDefaultCharset utf-8
 
